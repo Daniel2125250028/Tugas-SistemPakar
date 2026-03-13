@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar THT | Diagnosis Pintar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem Pakar THT</h1>
+            <p>Diagnosa dini gangguan Telinga, Hidung, dan Tenggorokan</p>
+        </header>
+
+        <div class="symptom-section">
+            <h3>Pilih Gejala yang Anda Alami:</h3>
+            <div id="symptomGrid" class="symptom-grid">
+                <!-- Symptoms will be loaded here via JS -->
+                <div style="text-align: center; padding: 2rem; width: 100%; color: var(--text-muted);">
+                    Memuat data gejala...
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="diagnoseBtn" class="btn" disabled>Mulai Diagnosis</button>
+        </div>
+
+        <div id="results" class="results">
+            <div class="result-card">
+                <div class="result-header">
+                    <div>
+                        <h4>Hasil Diagnosis Utama:</h4>
+                        <h2 id="mainDisease">-</h2>
+                    </div>
+                    <div class="probability" id="mainProb">0%</div>
+                </div>
+                
+                <div id="otherPossibilities" class="other-possibilities">
+                    <h4>Kemungkinan Lainnya:</h4>
+                    <div id="possibilityList">
+                        <!-- Other matches will be listed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
